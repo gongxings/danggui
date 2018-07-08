@@ -7,4 +7,13 @@
   </parent>
   <artifactId>danggui-generator</artifactId>
   <description>代码生成工具</description>
+  
+   <dependencies>
+        <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+  
 </project>
