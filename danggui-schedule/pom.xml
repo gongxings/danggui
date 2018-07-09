@@ -8,4 +8,24 @@
   <groupId>com.danggui.schedule</groupId>
   <artifactId>danggui-schedule</artifactId>
   <description>定时任务模块</description>
+  
+   <dependencies>
+        <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz-version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>c3p0</artifactId>
+                    <groupId>c3p0</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+  
 </project>
