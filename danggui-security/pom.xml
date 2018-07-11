@@ -5,7 +5,14 @@
     <artifactId>danggui</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.danggui.security</groupId>
   <artifactId>danggui-security</artifactId>
   <description>安全模块</description>
+  
+   <dependencies>
+        <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
