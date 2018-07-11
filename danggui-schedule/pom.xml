@@ -5,7 +5,6 @@
     <artifactId>danggui</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.danggui.schedule</groupId>
   <artifactId>danggui-schedule</artifactId>
   <description>定时任务模块</description>
   
