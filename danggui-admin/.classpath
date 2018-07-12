@@ -33,9 +33,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/danggui-common"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/danggui-generator"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/danggui-schedule"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/danggui-security"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

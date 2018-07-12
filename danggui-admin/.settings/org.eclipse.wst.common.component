@@ -7,6 +7,9 @@
         <dependent-module archiveName="danggui-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/danggui-common/danggui-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="danggui-security-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/danggui-security/danggui-security">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="danggui-generator-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/danggui-generator/danggui-generator">
             <dependency-type>uses</dependency-type>
         </dependent-module>

@@ -1,17 +1,23 @@
-package com.platform.controller;
+package com.danggui.admin.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.platform.annotation.SysLog;
-import com.platform.entity.SysOssEntity;
-import com.platform.oss.CloudStorageConfig;
-import com.platform.oss.OSSFactory;
-import com.platform.service.SysConfigService;
-import com.platform.service.SysOssService;
-import com.platform.utils.*;
-import com.platform.validator.ValidatorUtils;
-import com.platform.validator.group.AliyunGroup;
-import com.platform.validator.group.QcloudGroup;
-import com.platform.validator.group.QiniuGroup;
+import com.danggui.admin.entity.SysOssEntity;
+import com.danggui.admin.service.SysOssService;
+import com.danggui.common.annotation.SysLog;
+import com.danggui.common.oss.CloudStorageConfig;
+import com.danggui.common.oss.OSSFactory;
+import com.danggui.common.service.SysConfigService;
+import com.danggui.common.utils.ConfigConstant;
+import com.danggui.common.utils.Constant;
+import com.danggui.common.utils.PageUtils;
+import com.danggui.common.utils.Query;
+import com.danggui.common.utils.R;
+import com.danggui.common.utils.RRException;
+import com.danggui.common.validator.ValidatorUtils;
+import com.danggui.common.validator.group.AliyunGroup;
+import com.danggui.common.validator.group.QcloudGroup;
+import com.danggui.common.validator.group.QiniuGroup;
+
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;

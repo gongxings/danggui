@@ -15,11 +15,11 @@
             <artifactId>danggui-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <!-- <dependency>
+        <dependency>
             <groupId>com.danggui</groupId>
             <artifactId>danggui-security</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency> -->
+        </dependency>
         <dependency>
             <groupId>com.danggui</groupId>
             <artifactId>danggui-generator</artifactId>

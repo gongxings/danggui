@@ -7,4 +7,30 @@
   </parent>
   <artifactId>danggui-api</artifactId>
   <description>小程序接口模块</description>
+  
+   <dependencies>
+        <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+         <!--swagger 依赖-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.1.4</version>
+        </dependency>
+    </dependencies>
 </project>

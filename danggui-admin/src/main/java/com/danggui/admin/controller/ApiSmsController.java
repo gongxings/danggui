@@ -1,16 +1,23 @@
-package com.platform.controller;
+package com.danggui.admin.controller;
 
-import com.platform.annotation.IgnoreAuth;
-import com.platform.entity.SysSmsLogEntity;
-import com.platform.service.SysSmsLogService;
-import com.platform.utils.*;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.Map;
+import com.danggui.admin.entity.SysSmsLogEntity;
+import com.danggui.admin.service.SysSmsLogService;
+import com.danggui.api.annotation.IgnoreAuth;
+import com.danggui.common.utils.DateUtils;
+import com.danggui.common.utils.R;
+import com.danggui.common.utils.RRException;
+import com.danggui.common.utils.RequestUtil;
+import com.danggui.common.utils.ResourceUtil;
+import com.danggui.common.utils.StringUtils;
 
 /**
  * 发送短信接口Controller
