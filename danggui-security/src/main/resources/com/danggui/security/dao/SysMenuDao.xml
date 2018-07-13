@@ -3,11 +3,11 @@
 
 <mapper namespace="com.platform.dao.SysMenuDao">
 
-    <select id="queryObject" resultType="com.platform.entity.SysMenuEntity">
+    <select id="queryObject" resultType="com.danggui.security.entity.SysMenuEntity">
 		select * from sys_menu where menu_id = #{value}
 	</select>
 
-    <insert id="save" parameterType="com.platform.entity.SysMenuEntity">
+    <insert id="save" parameterType="com.danggui.security.entity.SysMenuEntity">
 		insert into sys_menu
 		(
 			`menu_id`, 
@@ -34,15 +34,15 @@
 		)
 	</insert>
 
-    <select id="queryListParentId" resultType="com.platform.entity.SysMenuEntity">
+    <select id="queryListParentId" resultType="com.danggui.security.entity.SysMenuEntity">
 		select * from sys_menu where parent_id = #{parentId} AND status = 0 order by order_num asc
 	</select>
 
-    <select id="queryNotButtonList" resultType="com.platform.entity.SysMenuEntity">
+    <select id="queryNotButtonList" resultType="com.danggui.security.entity.SysMenuEntity">
 		select * from sys_menu where type != 2 AND status = 0 order by order_num asc
 	</select>
 
-    <select id="queryList" resultType="com.platform.entity.SysMenuEntity">
+    <select id="queryList" resultType="com.danggui.security.entity.SysMenuEntity">
         select m.*,(select p.name from sys_menu p where p.menu_id = m.parent_id) as parentName
         from sys_menu m WHERE 1=1
         <if test="menuName != null and menuName.trim() != ''">
@@ -65,7 +65,7 @@
     </select>
 
     <!-- 查询用户的权限列表 -->
-    <select id="queryUserList" resultType="com.platform.entity.SysMenuEntity">
+    <select id="queryUserList" resultType="com.danggui.security.entity.SysMenuEntity">
 		select distinct m.*,(select p.name from sys_menu p where p.menu_id = m.parent_id) as parentName
 			from sys_user_role ur 
 			LEFT JOIN sys_role_menu rm on ur.role_id = rm.role_id 
@@ -83,7 +83,7 @@
         </if>
 	</select>
 
-    <update id="update" parameterType="com.platform.entity.SysMenuEntity">
+    <update id="update" parameterType="com.danggui.security.entity.SysMenuEntity">
         update sys_menu
         <set>
             <if test="parentId != null">`parent_id` = #{parentId},</if>
