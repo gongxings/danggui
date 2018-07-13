@@ -4,12 +4,12 @@
 	<tool>
 	    <key>shiro</key>
 	    <scope>application</scope>
-	    <class>com.platform.shiro.VelocityShiro</class>
+	    <class>com.danggui.security.shiro.VelocityShiro</class>
 	</tool>
 	<!-- 当前登录用户信息 -->
 	<tool>
 		<key>user</key>
 		<scope>application</scope>
-		<class>com.platform.utils.ShiroUtils</class>
+		<class>com.danggui.security.utils.ShiroUtils</class>
 	</tool>
 </toolbox>
