@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.platform.dao.ApiKeywordsMapper">
+<mapper namespace="com.danggui.api.dao.ApiKeywordsMapper">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.platform.entity.KeywordsVo" id="keywordsMap">
+    <resultMap type="com.danggui.api.entity.KeywordsVo" id="keywordsMap">
         <result property="keyword" column="keyword"/>
         <result property="is_hot" column="is_hot"/>
         <result property="is_default" column="is_default"/>
@@ -50,7 +50,7 @@
 		select count(*) from nideshop_keywords 
 	</select>
 
-    <insert id="save" parameterType="com.platform.entity.KeywordsVo">
+    <insert id="save" parameterType="com.danggui.api.entity.KeywordsVo">
 		insert into nideshop_keywords
 		(
 			`keyword`, 
@@ -75,7 +75,7 @@
 		)
 	</insert>
 
-    <update id="update" parameterType="com.platform.entity.KeywordsVo">
+    <update id="update" parameterType="com.danggui.api.entity.KeywordsVo">
         update nideshop_keywords
         <set>
             <if test="is_hot != null">`is_hot` = #{is_hot},</if>

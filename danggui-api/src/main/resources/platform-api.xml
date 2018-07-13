@@ -9,7 +9,7 @@
 
     <mvc:annotation-driven>
         <mvc:argument-resolvers>
-            <bean class="com.platform.resolver.LoginUserHandlerMethodArgumentResolver">
+            <bean class="com.danggui.api.resolver.LoginUserHandlerMethodArgumentResolver">
                 <property name="userService" ref="apiUserService"></property>
             </bean>
         </mvc:argument-resolvers>
@@ -22,5 +22,5 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
-    <bean id="authorizationInterceptor" class="com.platform.interceptor.AuthorizationInterceptor"/>
+    <bean id="authorizationInterceptor" class="com.danggui.api.interceptor.AuthorizationInterceptor"/>
 </beans>

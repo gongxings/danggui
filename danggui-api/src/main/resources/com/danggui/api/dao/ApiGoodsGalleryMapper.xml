@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.platform.dao.ApiGoodsGalleryMapper">
+<mapper namespace="com.danggui.api.dao.ApiGoodsGalleryMapper">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.platform.entity.GoodsGalleryVo" id="goodsGalleryMap">
+    <resultMap type="com.danggui.api.entity.GoodsGalleryVo" id="goodsGalleryMap">
         <result property="id" column="id"/>
         <result property="goods_id" column="goods_id"/>
         <result property="img_url" column="img_url"/>
@@ -47,7 +47,7 @@
 		select count(*) from nideshop_goods_gallery 
 	</select>
 
-    <insert id="save" parameterType="com.platform.entity.GoodsGalleryVo" useGeneratedKeys="true" keyProperty="id">
+    <insert id="save" parameterType="com.danggui.api.entity.GoodsGalleryVo" useGeneratedKeys="true" keyProperty="id">
 		insert into nideshop_goods_gallery
 		(
 			`goods_id`, 
@@ -64,7 +64,7 @@
 		)
 	</insert>
 
-    <update id="update" parameterType="com.platform.entity.GoodsGalleryVo">
+    <update id="update" parameterType="com.danggui.api.entity.GoodsGalleryVo">
         update nideshop_goods_gallery
         <set>
             <if test="goods_id != null">`goods_id` = #{goods_id},</if>

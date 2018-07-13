@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.platform.dao.ApiSpecificationMapper">
+<mapper namespace="com.danggui.api.dao.ApiSpecificationMapper">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.platform.entity.SpecificationVo" id="specificationMap">
+    <resultMap type="com.danggui.api.entity.SpecificationVo" id="specificationMap">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="sort_order" column="sort_order"/>
@@ -33,7 +33,7 @@
 		select count(*) from nideshop_specification 
 	</select>
 
-    <insert id="save" parameterType="com.platform.entity.SpecificationVo" useGeneratedKeys="true" keyProperty="id">
+    <insert id="save" parameterType="com.danggui.api.entity.SpecificationVo" useGeneratedKeys="true" keyProperty="id">
 		insert into nideshop_specification
 		(
 			`name`, 
@@ -46,7 +46,7 @@
 		)
 	</insert>
 
-    <update id="update" parameterType="com.platform.entity.SpecificationVo">
+    <update id="update" parameterType="com.danggui.api.entity.SpecificationVo">
         update nideshop_specification
         <set>
             <if test="name != null">`name` = #{name},</if>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.platform.dao.ApiSearchHistoryMapper">
+<mapper namespace="com.danggui.api.dao.ApiSearchHistoryMapper">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.platform.entity.SearchHistoryVo" id="searchHistoryMap">
+    <resultMap type="com.danggui.api.entity.SearchHistoryVo" id="searchHistoryMap">
         <result property="id" column="id"/>
         <result property="keyword" column="keyword"/>
         <result property="from" column="from"/>
@@ -47,7 +47,7 @@
 		select count(*) from nideshop_search_history 
 	</select>
 
-    <insert id="save" parameterType="com.platform.entity.SearchHistoryVo" useGeneratedKeys="true" keyProperty="id">
+    <insert id="save" parameterType="com.danggui.api.entity.SearchHistoryVo" useGeneratedKeys="true" keyProperty="id">
 		insert into nideshop_search_history
 		(
 			`keyword`, 
@@ -64,7 +64,7 @@
 		)
 	</insert>
 
-    <update id="update" parameterType="com.platform.entity.SearchHistoryVo">
+    <update id="update" parameterType="com.danggui.api.entity.SearchHistoryVo">
         update nideshop_search_history
         <set>
             <if test="keyword != null">`keyword` = #{keyword},</if>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.platform.dao.ApiGoodsSpecificationMapper">
+<mapper namespace="com.danggui.api.dao.ApiGoodsSpecificationMapper">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.platform.entity.GoodsSpecificationVo" id="goodsSpecificationMap">
+    <resultMap type="com.danggui.api.entity.GoodsSpecificationVo" id="goodsSpecificationMap">
         <result property="id" column="id"/>
         <result property="goods_id" column="goods_id"/>
         <result property="specification_id" column="specification_id"/>
@@ -57,7 +57,7 @@
 		select count(*) from nideshop_goods_specification 
 	</select>
 
-    <insert id="save" parameterType="com.platform.entity.GoodsSpecificationVo" useGeneratedKeys="true" keyProperty="id">
+    <insert id="save" parameterType="com.danggui.api.entity.GoodsSpecificationVo" useGeneratedKeys="true" keyProperty="id">
 		insert into nideshop_goods_specification
 		(
 			`goods_id`, 
@@ -74,7 +74,7 @@
 		)
 	</insert>
 
-    <update id="update" parameterType="com.platform.entity.GoodsSpecificationVo">
+    <update id="update" parameterType="com.danggui.api.entity.GoodsSpecificationVo">
         update nideshop_goods_specification
         <set>
             <if test="goods_id != null">`goods_id` = #{goods_id},</if>

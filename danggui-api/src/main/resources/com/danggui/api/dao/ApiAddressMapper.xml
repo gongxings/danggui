@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.platform.dao.ApiAddressMapper">
+<mapper namespace="com.danggui.api.dao.ApiAddressMapper">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.platform.entity.AddressVo" id="addressMap">
+    <resultMap type="com.danggui.api.entity.AddressVo" id="addressMap">
         <result property="id" column="id"/>
         <result property="userId" column="user_id"/>
         <result property="userName" column="user_name"/>
@@ -46,7 +46,7 @@
 		select count(*) from nideshop_address 
 	</select>
 
-    <insert id="save" parameterType="com.platform.entity.AddressVo" useGeneratedKeys="true" keyProperty="id">
+    <insert id="save" parameterType="com.danggui.api.entity.AddressVo" useGeneratedKeys="true" keyProperty="id">
 		insert into nideshop_address(
 			`user_id`,
 			`user_name`,
@@ -71,7 +71,7 @@
 			#{is_default})
 	</insert>
 
-    <update id="update" parameterType="com.platform.entity.AddressVo">
+    <update id="update" parameterType="com.danggui.api.entity.AddressVo">
         update nideshop_address
         <set>
             <if test="userId != null">`user_id` = #{userId}, </if>
