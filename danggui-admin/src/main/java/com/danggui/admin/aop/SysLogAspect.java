@@ -35,7 +35,7 @@ public class SysLogAspect {
     /**
      * 切点
      */
-    @Pointcut("@annotation(com.platform.annotation.SysLog)")
+    @Pointcut("@annotation(com.danggui.common.annotation.SysLog)")
     public void logPointCut() {
 
     }

@@ -62,8 +62,8 @@
     <bean id="druid-stat-pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut" scope="prototype">
         <property name="patterns">
             <list>
-                <value>com.platform.controller.*</value>
-                <value>com.platform.service.*</value>
+                <value>com.danggui.*.controller.*</value>
+                <value>com.danggui.*.service.*</value>
             </list>
         </property>
     </bean>

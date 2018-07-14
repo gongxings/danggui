@@ -33,7 +33,7 @@ public class DataFilterAspect {
     /**
      * 切点
      */
-    @Pointcut("@annotation(com.platform.annotation.DataFilter)")
+    @Pointcut("@annotation(com.danggui.common.annotation.DataFilter)")
     public void dataFilterCut() {
 
     }

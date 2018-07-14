@@ -34,8 +34,8 @@ import java.util.Map;
 /**
  * 文件上传Controller
  *
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2017-03-25 12:13:26
  */
 @RestController

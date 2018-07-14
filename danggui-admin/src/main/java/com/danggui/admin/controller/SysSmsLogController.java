@@ -21,7 +21,7 @@ import java.util.Map;
 /**
  * 发送短信日志Controller
  *
- * @author lipengjun
+ * @author GongXingSheng
  * @date 2017-12-16 23:38:05
  */
 @RestController

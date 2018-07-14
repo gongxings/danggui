@@ -23,7 +23,7 @@ import com.danggui.common.utils.StringUtils;
  * 发送短信接口Controller
  *
  * @author liepngjun
- * @email 939961241@qq.com
+ * 
  * @date 2018-06-05 13:58:47
  */
 @RestController
