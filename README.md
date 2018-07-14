@@ -2,8 +2,8 @@
 danggui小程序商城管理系统
 
 ## 技术栈
-后端：SSM+shir+druid+quartz+slf4j+swagger+mysql
-前端：vue+bootstrap+iview+jquery+ztree
+* 后端：SSM+shir+druid+quartz+slf4j+swagger+mysql
+* 前端：vue+bootstrap+iview+jquery+ztree
 
 ## 项目结构
 * danggui              --pom项目
