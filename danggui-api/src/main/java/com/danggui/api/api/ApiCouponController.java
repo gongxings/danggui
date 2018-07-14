@@ -36,8 +36,8 @@ import com.danggui.common.utils.StringUtils;
 /**
  * API优惠券管理
  *
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2017-03-23 15:31
  */
 @RestController

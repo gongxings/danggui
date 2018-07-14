@@ -12,8 +12,8 @@ import com.danggui.common.validator.Assert;
 /**
  * 注册
  *
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2017-03-26 17:27
  */
 @RestController

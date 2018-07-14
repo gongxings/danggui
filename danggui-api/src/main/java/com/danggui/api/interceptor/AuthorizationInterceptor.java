@@ -17,8 +17,8 @@ import com.danggui.common.utils.ApiRRException;
 /**
  * 权限(Token)验证
  *
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2017-03-23 15:38
  */
 @Component

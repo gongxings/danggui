@@ -3,8 +3,8 @@ package com.danggui.api.entity;
 import com.danggui.common.entity.SysRegionEntity;
 
 /**
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2017-08-15 08:03:41
  */
 public class RegionVo {

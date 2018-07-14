@@ -14,8 +14,8 @@ import com.danggui.common.utils.R;
 /**
  * API测试接口
  *
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2017-03-23 15:47
  */
 @RestController

@@ -7,8 +7,8 @@ import com.danggui.api.entity.CouponVo;
 import com.danggui.common.dao.BaseDao;
 
 /**
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2017-08-11 09:16:46
  */
 public interface ApiCouponMapper extends BaseDao<CouponVo> {
