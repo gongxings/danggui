@@ -11,8 +11,8 @@ import com.danggui.security.entity.SysRoleEntity;
 /**
  * 角色
  *
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2016年9月18日 上午9:42:52
  */
 public interface SysRoleService {

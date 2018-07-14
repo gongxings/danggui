@@ -29,7 +29,7 @@
 		</if>
 	</select>
 
-	<select id="queryListByBean" resultType="com.danggui.security.entity.UserWindowDto">
+	<select id="queryListByBean" resultType="com.danggui.common.entity.UserWindowDto">
 		select
 		id,username name,dept_Id
 		from sys_user

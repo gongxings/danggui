@@ -101,7 +101,7 @@
 	</select>
 
 	<!--根据角色id查询可用的组织机构-->
-	<select id="queryPageByDto" resultType="com.danggui.security.entity.UserWindowDto" >
+	<select id="queryPageByDto" resultType="com.danggui.common.entity.UserWindowDto" >
 		select
 		role_id id,role_name name ,dept_id
 		from sys_role

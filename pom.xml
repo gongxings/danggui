@@ -11,6 +11,7 @@
   	<module>danggui-security</module>
   	<module>danggui-schedule</module>
   	<module>danggui-api</module>
+  	<module>danggui-mall</module>
   </modules>
   
   <properties>
