@@ -23,8 +23,8 @@ public class Constant {
     /**
      * 菜单类型
      *
-     * @author lipengjun
-     * @email 939961241@qq.com
+     * @author GongXingSheng
+     * 
      * @date 2016年11月15日 下午1:24:29
      */
     public enum MenuType {

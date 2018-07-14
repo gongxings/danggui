@@ -25,8 +25,8 @@ import com.qcloud.cos.transfer.Upload;
 /**
  * 腾讯云存储
  *
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2017-03-26 20:51
  */
 public class QcloudCloudStorageService extends CloudStorageService {

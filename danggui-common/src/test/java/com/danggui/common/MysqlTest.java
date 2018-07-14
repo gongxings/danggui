@@ -7,33 +7,33 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * Êı¾İ¿â²âÊÔÀà
+ * 
  * @author GongXings
- * @date 2018Äê7ÔÂ8ÈÕ
+ * @date 2018å¹´7æœˆ14æ—¥ ä¸Šåˆ9:42:45
  */
 public class MysqlTest {
 	
 
 
     /**
-     * Êı¾İ¿âurl
+     * ï¿½ï¿½ï¿½İ¿ï¿½url
      */
     private static final String URL = "jdbc:mysql://localhost:3306/platform";
     /**
-     * ÓÃ»§Ãû
+     * ï¿½Ã»ï¿½ï¿½ï¿½
      */
     private static final String USER = "root";
     /**
-     * ÃÜÂë
+     * ï¿½ï¿½ï¿½ï¿½
      */
     private static final String PASSWORD = "root";
     /**
-     * mysqlÇı¶¯³ÌĞò
+     * mysqlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private static final String ORACLEDRIVER = "com.mysql.jdbc.Driver";
 
     /**
-     * Æô¶¯³ÌĞò
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      *
      * @param args
      */
@@ -44,24 +44,24 @@ public class MysqlTest {
         try {
             Class.forName(ORACLEDRIVER);
             con = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Á¬½Ó³É¹¦£¡");
+            System.out.println("ï¿½ï¿½ï¿½Ó³É¹ï¿½ï¿½ï¿½");
 
             String sql = "select * from nideshop_user";
             pre = con.prepareStatement(sql);
-            result = pre.executeQuery();//Ö´ĞĞ²éÑ¯
+            result = pre.executeQuery();//Ö´ï¿½Ğ²ï¿½Ñ¯
 
             while (result.next()) {
-                // µ±½á¹û¼¯²»Îª¿ÕÊ±
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ê±
                 String username = result.getString("username");
                 String mobile = result.getString("mobile");
-                System.out.println("»áÔ±£º"+username + "£»ÊÖ»úºÅ£º" +mobile);
+                System.out.println("ï¿½ï¿½Ô±ï¿½ï¿½"+username + "ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Å£ï¿½" +mobile);
             }
         } catch (ClassNotFoundException e) {
-            //Êı¾İ¿âÇı¶¯ÀàÒì³£´¦Àí
+            //ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½
             System.out.println("Sorry,can`t find the Driver!");
             e.printStackTrace();
         } catch (SQLException e) {
-            //Êı¾İ¿âÁ¬½ÓÊ§°ÜÒì³£´¦Àí
+            //ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½
             e.printStackTrace();
         } catch (Exception e) {
             // TODO: handle exception
@@ -77,7 +77,7 @@ public class MysqlTest {
                 if (con != null) {
                     con.close();
                 }
-                System.out.println("Êı¾İ¿âÁ¬½ÓÒÑ¹Ø±Õ£¡");
+                System.out.println("ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹Ø±Õ£ï¿½");
             } catch (Exception e) {
                 e.printStackTrace();
             }

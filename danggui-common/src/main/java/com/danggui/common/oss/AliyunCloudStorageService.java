@@ -11,8 +11,8 @@ import java.io.InputStream;
 /**
  * 阿里云存储
  *
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2017-03-26 16:22
  */
 public class AliyunCloudStorageService extends CloudStorageService {

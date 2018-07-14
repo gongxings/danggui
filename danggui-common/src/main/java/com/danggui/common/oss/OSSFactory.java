@@ -8,8 +8,8 @@ import com.danggui.common.utils.SpringContextUtils;
 /**
  * 文件上传Factory
  *
- * @author lipengjun
- * @email 939961241@qq.com
+ * @author GongXingSheng
+ * 
  * @date 2017-03-26 10:18
  */
 public final class OSSFactory {
