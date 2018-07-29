@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 public class ResourceUtil {
     private static ResourceUtil RESOURCE_UTIL = null;
 
-    private static ResourceBundle BUNDLE = java.util.ResourceBundle.getBundle("platform");
+    private static ResourceBundle BUNDLE = java.util.ResourceBundle.getBundle("danggui");
 
     private ResourceUtil() {
 

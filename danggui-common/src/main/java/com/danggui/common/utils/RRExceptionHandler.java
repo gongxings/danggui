@@ -14,7 +14,7 @@ import java.util.HashMap;
  * @author GongXings
  * @date 2018年7月8日
  */
-@RestControllerAdvice(value = {"com.platform"})
+@RestControllerAdvice(value = {"com.danggui"})
 public class RRExceptionHandler {
     private Logger logger = LoggerFactory.getLogger(getClass());
 

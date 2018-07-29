@@ -10,6 +10,7 @@ import java.io.UnsupportedEncodingException;
  * @author GongXings
  * @date 2018年7月8日
  */
+@SuppressWarnings("restriction")
 public class Base64 {
     // 加密
     public static String encode(String str) {

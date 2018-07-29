@@ -36,7 +36,7 @@ public class SwaggerConfig {
                 "小程序接口文档",
                 "1.0",
                 "urn:tos",
-                "platform",
+                "danggui",
                 "Apache 2.0",
                 "http://www.apache.org/licenses/LICENSE-2.0");
         return info;

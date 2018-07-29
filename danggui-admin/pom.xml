@@ -35,12 +35,12 @@
             <artifactId>danggui-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-       <dependency>
+      <!--  <dependency>
             <groupId>com.danggui</groupId>
             <artifactId>danggui-mall</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <type>war</type>
-        </dependency>
+        </dependency> -->
         <!--验证码生成工具-->
         <dependency>
             <groupId>com.github.axet</groupId>
@@ -91,7 +91,9 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                   
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                   
                     <webResources>
                         <resource>
                             <directory>src/main/resources/${env}</directory>

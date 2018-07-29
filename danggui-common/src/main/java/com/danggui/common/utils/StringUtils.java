@@ -43,10 +43,10 @@ public class StringUtils {
             return ((CharSequence) obj).length() == 0;
 
         if (obj instanceof Collection)
-            return ((Collection) obj).isEmpty();
+            return ((Collection<?>) obj).isEmpty();
 
         if (obj instanceof Map)
-            return ((Map) obj).isEmpty();
+            return ((Map<?, ?>) obj).isEmpty();
 
         if (obj instanceof Object[]) {
             Object[] object = (Object[]) obj;

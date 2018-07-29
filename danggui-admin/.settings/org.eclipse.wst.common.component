@@ -19,13 +19,8 @@
         <dependent-module archiveName="danggui-api-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/danggui-api/danggui-api">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module deploy-path="/" handle="module:/overlay/prj/danggui-mall?includes=**/**&amp;excludes=META-INF/MANIFEST.MF">
-            <dependency-type>consumes</dependency-type>
-        </dependent-module>
-        <dependent-module deploy-path="/" handle="module:/overlay/slf/?includes=**/**&amp;excludes=META-INF/MANIFEST.MF">
-            <dependency-type>consumes</dependency-type>
-        </dependent-module>
         <property name="context-root" value="danggui-admin"/>
         <property name="java-output-path" value="/danggui-admin/target/classes"/>
+        <property name="component.exclusion.patterns"/>
     </wb-module>
 </project-modules>

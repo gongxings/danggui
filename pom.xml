@@ -12,6 +12,7 @@
   	<module>danggui-schedule</module>
   	<module>danggui-api</module>
   	<module>danggui-mall</module>
+  	<module>danggui-merger</module>
   </modules>
   
   <properties>

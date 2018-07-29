@@ -31,8 +31,8 @@ public class RegionCacheUtil implements InitializingBean {
      *
      * @return
      */
-    public static List getAllCountry() {
-        List<SysRegionEntity> resultObj = new ArrayList();
+    public static List<SysRegionEntity> getAllCountry() {
+        List<SysRegionEntity> resultObj = new ArrayList<SysRegionEntity>();
         if (null != sysRegionEntityList) {
             for (SysRegionEntity areaVo : sysRegionEntityList) {
                 if (areaVo.getType().equals(0)) {
@@ -48,8 +48,8 @@ public class RegionCacheUtil implements InitializingBean {
      *
      * @return
      */
-    public static List getAllProvice() {
-        List<SysRegionEntity> resultObj = new ArrayList();
+    public static List<SysRegionEntity> getAllProvice() {
+        List<SysRegionEntity> resultObj = new ArrayList<SysRegionEntity>();
         if (null != sysRegionEntityList) {
             for (SysRegionEntity areaVo : sysRegionEntityList) {
                 if (areaVo.getType().equals(1)) {
@@ -66,7 +66,7 @@ public class RegionCacheUtil implements InitializingBean {
      * @return
      */
     public static List<SysRegionEntity> getAllCity() {
-        List<SysRegionEntity> resultObj = new ArrayList();
+        List<SysRegionEntity> resultObj = new ArrayList<SysRegionEntity>();
         if (null != sysRegionEntityList) {
             for (SysRegionEntity areaVo : sysRegionEntityList) {
                 if (areaVo.getType().equals(2)) {
@@ -82,8 +82,8 @@ public class RegionCacheUtil implements InitializingBean {
      *
      * @return
      */
-    public static List getAllProviceByParentId(Integer areaId) {
-        List<SysRegionEntity> resultObj = new ArrayList();
+    public static List<SysRegionEntity> getAllProviceByParentId(Integer areaId) {
+        List<SysRegionEntity> resultObj = new ArrayList<SysRegionEntity>();
         if (null == areaId) {
             return resultObj;
         }
@@ -102,8 +102,8 @@ public class RegionCacheUtil implements InitializingBean {
      *
      * @return
      */
-    public static List getChildrenCity(Integer areaId) {
-        List<SysRegionEntity> resultObj = new ArrayList();
+    public static List<SysRegionEntity> getChildrenCity(Integer areaId) {
+        List<SysRegionEntity> resultObj = new ArrayList<SysRegionEntity>();
         if (null == areaId) {
             return resultObj;
         }
@@ -122,8 +122,8 @@ public class RegionCacheUtil implements InitializingBean {
      *
      * @return
      */
-    public static List getChildrenCity(String proviceName) {
-        List<SysRegionEntity> resultObj = new ArrayList();
+    public static List<SysRegionEntity> getChildrenCity(String proviceName) {
+        List<SysRegionEntity> resultObj = new ArrayList<SysRegionEntity>();
         if (null == proviceName) {
             return resultObj;
         }
@@ -143,7 +143,7 @@ public class RegionCacheUtil implements InitializingBean {
      * @return
      */
     public static List<SysRegionEntity> getChildrenDistrict(Integer areaId) {
-        List<SysRegionEntity> resultObj = new ArrayList();
+        List<SysRegionEntity> resultObj = new ArrayList<SysRegionEntity>();
         if (null == areaId) {
             return resultObj;
         }
@@ -163,7 +163,7 @@ public class RegionCacheUtil implements InitializingBean {
      * @return
      */
     public static List<SysRegionEntity> getChildrenDistrict(String provinceName, String cityName) {
-        List<SysRegionEntity> resultObj = new ArrayList();
+        List<SysRegionEntity> resultObj = new ArrayList<SysRegionEntity>();
         if (null == provinceName || null == cityName) {
             return resultObj;
         }
@@ -187,7 +187,7 @@ public class RegionCacheUtil implements InitializingBean {
      * @return
      */
     public static List<SysRegionEntity> getChildrenByParentId(Integer parentId) {
-        List<SysRegionEntity> resultObj = new ArrayList();
+        List<SysRegionEntity> resultObj = new ArrayList<SysRegionEntity>();
         if (null == parentId) {
             return resultObj;
         }

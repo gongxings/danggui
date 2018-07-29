@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.danggui</groupId>
+    <artifactId>danggui</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>danggui-merger</artifactId>
+  <packaging>war</packaging>
+  <description>WEB模块合并</description>
+  
+   <dependencies>
+       <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-security</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-generator</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-schedule</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+       <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-mall</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+         <dependency>
+            <groupId>com.danggui</groupId>
+            <artifactId>danggui-admin</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+     </dependencies>
+     
+      <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <finalName>danggui-merger</finalName>
+        <plugins>
+            <!-- 合并多个war -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <packagingExcludes>WEB-INF/web.xml</packagingExcludes>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <overlays>
+                        <overlay>
+                            <groupId>com.danggui</groupId>
+                            <artifactId>danggui-admin</artifactId>
+                        </overlay>
+                        <overlay>
+                            <groupId>com.danggui</groupId>
+                            <artifactId>danggui-mall</artifactId>
+                        </overlay>
+
+                        <!-- 待添加其他要合并的 web 模块 -->
+                    </overlays>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

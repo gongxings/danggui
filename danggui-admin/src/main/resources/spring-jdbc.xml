@@ -11,10 +11,10 @@
         http://www.springframework.org/schema/tx
      	http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
 		http://www.springframework.org/schema/aop
-		http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+		http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
 
     <tx:annotation-driven/>
-    <context:property-placeholder location="classpath*:platform.properties"/>
+    <context:property-placeholder location="classpath*:danggui.properties"/>
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">

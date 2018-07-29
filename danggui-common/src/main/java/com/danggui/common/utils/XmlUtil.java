@@ -24,7 +24,7 @@ public class XmlUtil {
      * @param clazz  待转换的class
      * @return 转换后的对象
      */
-    public static Object xmlStrToBean(String xmlStr, Class clazz) {
+    public static Object xmlStrToBean(String xmlStr, Class<?> clazz) {
         Object obj = null;
         try {
             // 将xml格式的数据转换成Map对象
@@ -54,7 +54,7 @@ public class XmlUtil {
         // 获取根节点
         Element root = doc.getRootElement();
         // 获取根节点下的所有元素
-        List children = root.elements();
+        List<?> children = root.elements();
         // 循环所有子元素
         if (children != null && children.size() > 0) {
             for (int i = 0; i < children.size(); i++) {
@@ -74,7 +74,7 @@ public class XmlUtil {
      * @return
      * @throws Exception
      */
-    public static Object xmlStrToJavaBean(String xmlStr, Class clazz) {
+    public static Object xmlStrToJavaBean(String xmlStr, Class<?> clazz) {
         if (StringUtils.isNullOrEmpty(xmlStr)) {
             return null;
         }
@@ -106,7 +106,7 @@ public class XmlUtil {
     public static Map<String, Object> elementToMap(Element element, Map<String, Object> map) {
         if (element == null || map == null)
             return null;
-        List children = element.elements();
+        List<?> children = element.elements();
         if (children != null && children.size() > 0) {
             for (int i = 0; i < children.size(); i++) {
                 Element child = (Element) children.get(i);
@@ -127,7 +127,7 @@ public class XmlUtil {
      * @return 转换后的Bean对象
      * @throws Exception 异常
      */
-    public static Object mapToBean(Map<String, Object> map, Class clazz) throws Exception {
+    public static Object mapToBean(Map<String, Object> map, Class<?> clazz) throws Exception {
         Object obj = clazz.newInstance();
         if (map != null && map.size() > 0) {
             for (Map.Entry<String, Object> entry : map.entrySet()) {
@@ -136,7 +136,7 @@ public class XmlUtil {
                 String setMethodName = "set" + propertyName.substring(0, 1).toUpperCase() + propertyName.substring(1);
                 Field field = getClassField(clazz, propertyName);
                 if (field != null) {
-                    Class fieldTypeClass = field.getType();
+                    Class<?> fieldTypeClass = field.getType();
                     value = convertValType(value, fieldTypeClass);
                     clazz.getMethod(setMethodName, field.getType()).invoke(obj, value);
                 }
@@ -152,7 +152,7 @@ public class XmlUtil {
      * @param fieldTypeClass 属性的类型
      * @return 转换后的值
      */
-    private static Object convertValType(Object value, Class fieldTypeClass) {
+    private static Object convertValType(Object value, Class<?> fieldTypeClass) {
         Object retVal = null;
         if (Long.class.getName().equals(fieldTypeClass.getName())
                 || long.class.getName().equals(fieldTypeClass.getName())) {
@@ -179,7 +179,7 @@ public class XmlUtil {
      * @param fieldName 字段名称
      * @return Field对象
      */
-    private static Field getClassField(Class clazz, String fieldName) {
+    private static Field getClassField(Class<?> clazz, String fieldName) {
         if (Object.class.getName().equals(clazz.getName())) {
             return null;
         }
@@ -190,7 +190,7 @@ public class XmlUtil {
             }
         }
 
-        Class superClass = clazz.getSuperclass();
+        Class<?> superClass = clazz.getSuperclass();
         if (superClass != null) {// 简单的递归一下
             return getClassField(superClass, fieldName);
         }
